@@ -14,6 +14,7 @@ public class OrderItemPK implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	
 	@ManyToOne
 	@JoinColumn(name = "order_id")
 	private Order order;
@@ -46,6 +47,7 @@ public class OrderItemPK implements Serializable {
 		result = prime * result + ((product == null) ? 0 : product.hashCode());
 		return result;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -67,7 +69,5 @@ public class OrderItemPK implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
 	
 }
